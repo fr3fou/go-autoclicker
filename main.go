@@ -7,21 +7,18 @@ import (
 )
 
 func main() {
+	time.Sleep(time.Second * 5)
 	down := w32.INPUT{
 		Type: 0,
 		Mi: w32.MOUSEINPUT{
-			DwFlags:   w32.MOUSEEVENTF_LEFTDOWN,
-			MouseData: 0,
-			Time:      0,
+			DwFlags: w32.MOUSEEVENTF_LEFTDOWN,
 		},
 	}
 
 	up := w32.INPUT{
 		Type: 0,
 		Mi: w32.MOUSEINPUT{
-			DwFlags:   w32.MOUSEEVENTF_LEFTUP,
-			MouseData: 0,
-			Time:      0,
+			DwFlags: w32.MOUSEEVENTF_LEFTUP,
 		},
 	}
 
