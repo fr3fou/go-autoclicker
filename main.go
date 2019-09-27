@@ -5,5 +5,11 @@ import (
 )
 
 func main() {
-	w32.MessageBox(0, "Hello World!", "Hello, World!", 0)
+	i := w32.INPUT{
+		Type: 0,
+		Mi: w32.MOUSEINPUT{
+			DwFlags: 0x0002,
+		},
+	}
+	w32.SendInput([]w32.INPUT{i})
 }
