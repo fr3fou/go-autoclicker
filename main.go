@@ -22,9 +22,7 @@ func main() {
 		},
 	}
 
-	for {
-		w32.SendInput([]w32.INPUT{down})
-		time.Sleep(25)
-		w32.SendInput([]w32.INPUT{up})
-	}
+	w32.SendInput([]w32.INPUT{down})
+	time.Sleep(25)
+	w32.SendInput([]w32.INPUT{up})
 }
